@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index PyME Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #337ab7;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            color: #777;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            max-height: 50px;
+        }
+    </style>
+</head>
+<header class="header">
+    <div style="display: none"></div>
+    <nav class="navbar navbar-default navbar-fixed-top hestia_left navbar-scroll-point">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="title-logo-wrapper">
+                    <a class="navbar-brand" href="https://www.pyme-manager.cl/" title="PYME Manager">
+                        <img src="https://www.pyme-manager.cl/wp-content/uploads/2022/07/1.webp" alt="PYME Manager" class="logo">
+                    </a>
+                </div>
+                <div class="navbar-toggle-wrapper">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation" aria-expanded="true">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="sr-only">Cambiar modo de navegación</span>
+                    </button>
+                </div>
+            </div>
+            <div id="main-navigation" class="navbar-collapse collapse in" aria-expanded="true">
+                <ul id="menu-main-menu" class="nav navbar-nav">
+                    <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-90 current_page_item menu-item-91 active">
+                        <a title="Inicio" href="https://www.pyme-manager.cl/">Inicio</a>
+                    </li>
+                    <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96">
+                        <a title="Servicios" href="https://www.pyme-manager.cl/servicios/">Servicios</a>
+                    </li>
+                    <li id="menu-item-258" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-258">
+                        <a title="Blog" href="https://www.pyme-manager.cl/category/columnas/">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<body>
+    <h1>Microsoft Azure Gestión de Documentos</h1>
+
+    <ul>
+        <li><a href="{{ auth_url }}">Sign In</a></li>
+
+        {% if config.get("B2C_RESET_PASSWORD_AUTHORITY") %}
+        <li><a href="{{ _build_auth_code_flow(authority=config['B2C_RESET_PASSWORD_AUTHORITY'])['auth_uri'] }}">Reset Password</a></li>
+        {% endif %}
+    </ul>
+
+    <hr>
+    <footer>Powered by MSAL Python {{ version }}</footer>
+</body>
+</html>
