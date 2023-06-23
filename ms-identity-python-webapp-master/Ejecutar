@@ -1,0 +1,10 @@
+Para ejecutar el codigo
+
+navegar hasta la carpeta raíz y instalar los requisitos:
+pip install -r requirements.txt
+
+luego se ejecuta el codigo:
+python app.py
+
+
+*el nombre de la app e  azure portal es Ppyme en caso de necesitar las id de conexión 
